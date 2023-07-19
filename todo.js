@@ -1,6 +1,6 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword ,signInWithEmailAndPassword,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+import { getAuth, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
   
 const firebaseConfig = {
   apiKey: "AIzaSyDLQiMauw4M0tTF5tx8QFKkudEgMEwCmcw",
@@ -19,10 +19,9 @@ const auth =getAuth();
 
 
 
-  let logout = document.getElementById('logout')
+let logout = document.getElementById('logout')
 
-  logout.addEventListener("click",function(){
-
+logout.addEventListener("click",function(){
 
     onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -35,35 +34,15 @@ const auth =getAuth();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let userArr = [];
 
 
-userArr =   JSON.parse(localStorage.getItem('user')) 
+userArr =JSON.parse(localStorage.getItem('user')) 
 
-function ourFunc(){
+ let butn = document.getElementById("butn");
+
+ butn.addEventListener("click",function(){
+
     
     var enterData = document.getElementById('todo').value
     
@@ -108,4 +87,4 @@ function ourFunc(){
  }
  )
 
-}
+})
