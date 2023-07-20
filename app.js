@@ -23,8 +23,8 @@
   
   reg.addEventListener("click",function(){
     
-    let email=document.getElementById("email").value
-    let password=document.getElementById("password").value
+    let email=document.getElementById("emaail").value
+    let password=document.getElementById("passwoord").value
      
 
 
